@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "smart-task-manager:build:production"
+              "buildTarget": "smart-task-manager:build:production"
             },
             "development": {
-              "browserTarget": "smart-task-manager:build:development"
+              "buildTarget": "smart-task-manager:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "smart-task-manager:build"
+            "buildTarget": "smart-task-manager:build"
           }
         },
         "test": {
