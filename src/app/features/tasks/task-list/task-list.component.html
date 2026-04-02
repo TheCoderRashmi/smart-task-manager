@@ -1,21 +1,23 @@
 <h2>Task List</h2>
-<div ngIf="taskService.tasks$().length === 0">
+@if (taskService.tasks$().length === 0) {
+  <div>
     <p>No tasks available</p>
-</div>
-<div ngIf="taskService.tasks$().length > 0">
+  </div>
+}
+@if (taskService.tasks$().length > 0) {
+  <div>
     <ul>
-        <!-- <li ngFor="t in taskService.tasks$()">
-            <input 
-          type="checkbox" 
-          [checked]="t.completed"
-          (change)="taskService.toggleTask(t.id)"
+      <!-- <li ngFor="t in taskService.tasks$()">
+      <input
+        type="checkbox"
+        [checked]="t.completed"
+        (change)="taskService.toggleTask(t.id)"
         />
-
         {{t.title}}
-
-            <button (click)="taskService.deleteTask(t.id)">
-                Delete
-            </button>
-        </li> -->
+        <button (click)="taskService.deleteTask(t.id)">
+          Delete
+        </button>
+      </li> -->
     </ul>>
-</div>
+  </div>
+}
